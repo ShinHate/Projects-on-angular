@@ -11,7 +11,7 @@ export class AppComponent {
 
   cars = [
     {
-      name: 'Frod',
+      name: 'Ford',
       isSold: false
     },
     {
