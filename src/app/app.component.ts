@@ -1,34 +1,20 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CarsService} from "./cars.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  providers: [CarsService]
 })
 
-export class AppComponent {
-  title = 'ng-dev';
+export class AppComponent implements OnInit{
 
-  cars = [
-    {
-      name: 'Ford',
-      isSold: false
-    },
-    {
-      name: 'Mazda',
-      isSold: true
-    },
-    {
-      name: 'Mercedes',
-      isSold: false
-    },
-  ];
+  cars = [{}];
 
-  addCarToList (carName: string) {
-    this.cars.push({
-      name: carName,
-      isSold: false
-    });
+  constructor(private service: CarsService) {}
+
+  ngOnInit() {
+    this.cars = this.service.cars
   }
-
 }

@@ -24,6 +24,5 @@ export class CarComponent {
   onAction(type: string) {
     this.car.isSold = type === 'buy' ? true : false;
     this.consoleService.log(`${this.car.name} status = ${type}`);
-
   }
 }
