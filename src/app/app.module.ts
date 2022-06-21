@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CarComponent } from "./car/car.component";
 import { CarAddComponent } from "./car-add/car-add.component";
-import {CarsService} from "./cars.service";
 
 import {FormsModule} from "@angular/forms";
+import {ConsoleService} from "./console.service";
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ConsoleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
