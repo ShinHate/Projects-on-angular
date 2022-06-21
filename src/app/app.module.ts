@@ -21,4 +21,5 @@ import {ConsoleService} from "./console.service";
   providers: [ConsoleService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
